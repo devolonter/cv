@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client'
 import { App } from './App'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorker from './serviceWorker'
+import './index.css'
 
 
 const container = document.getElementById('root')
