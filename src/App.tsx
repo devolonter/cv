@@ -5,11 +5,12 @@ import {
   theme, VStack,
 } from '@chakra-ui/react'
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
+import Skills from './components/Skills'
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Box
-      maxW="1280px"
+      maxW="960px"
       mx="auto"
       color={'gray.700'}
     >
@@ -68,15 +69,26 @@ export const App = () => (
           rounded={'xl'}
           mt={4}
         >
-          <Text>
-            I am an experienced web developer with over 15 years of experience in the field. My expertise lies in
-            front-end and back-end development, utilizing technologies such as HTML/CSS/JS, React, Vue, Node.js,
-            and WebGL to create engaging and interactive web experiences. I also have experience with game engines
-            such as Godot, and have a strong understanding of animation, shaders, and WebGL. I am constantly seeking
-            to improve my skills and stay current with the latest industry trends. I am excited about the opportunity
-            to bring my expertise to the role of a playable ads web developer.
-          </Text>
+          I am an experienced web developer with over 15 years of experience in the field. My expertise lies in
+          front-end and back-end development, utilizing technologies such as HTML/CSS/JS, React, Vue, Node.js,
+          and WebGL to create engaging and interactive web experiences. I also have experience with game engines
+          such as Godot, and have a strong understanding of animation, shaders, and WebGL. I am constantly seeking
+          to improve my skills and stay current with the latest industry trends. I am excited about the opportunity
+          to bring my expertise to the role of a playable ads web developer.
         </Box>
+        <Grid
+          templateColumns="1fr auto"
+          gap={4}
+          mt={4}
+        >
+          <GridItem>
+          </GridItem>
+          <GridItem>
+            <Skills
+              skills={['js', 'html', 'ts', 'node', 'godot', 'webgl', 'shaders', 'pixi', 'phaser']}
+            />
+          </GridItem>
+        </Grid>
       </Box>
     </Box>
   </ChakraProvider>
