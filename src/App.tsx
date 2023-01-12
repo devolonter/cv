@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
 import Skills from './components/Skills'
+import Experience from './components/Experience'
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -78,10 +79,16 @@ export const App = () => (
         </Box>
         <Grid
           templateColumns="1fr auto"
-          gap={4}
+          gap={6}
           mt={4}
         >
           <GridItem>
+            <VStack
+              w={'100%'}
+              alignItems={'start'}
+            >
+              <Experience />
+            </VStack>
           </GridItem>
           <GridItem>
             <Skills

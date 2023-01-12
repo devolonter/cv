@@ -1,6 +1,6 @@
 import { Badge, Box, chakra, Divider, Flex, HStack, Text, VStack } from '@chakra-ui/react'
 import skills from '../data/skills'
-import { AiFillStar } from 'react-icons/all'
+import { AiFillStar, GiStrong } from 'react-icons/all'
 
 const Star = chakra(AiFillStar)
 
@@ -63,19 +63,23 @@ export default function Skills(props: SkillsProps) {
     .sort((a, b) => b.lastUsed - a.lastUsed)
 
   return (
-    <Box>
-      <Text
+    <VStack
+      alignItems={'start'}
+    >
+      <HStack
         fontSize={'1.2rem'}
         fontWeight={'bold'}
         textTransform={'uppercase'}
         pl={'0.5rem'}
       >
-        Relevant Skills
-      </Text>
+        <GiStrong />
+        <Text>Skills</Text>
+      </HStack>
       <Divider />
       <VStack
         mt={2}
         pl={'0.5rem'}
+        pr={'2rem'}
         spacing={4}
       >
         {display.map((skill) => (
@@ -85,6 +89,6 @@ export default function Skills(props: SkillsProps) {
           />
         ))}
       </VStack>
-    </Box>
+    </VStack>
   )
 }
