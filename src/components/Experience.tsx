@@ -15,6 +15,7 @@ export default function Experience() {
       </HStack>
       <Divider />
       <VStack
+        spacing={4}
         w={'100%'}
       >
         {experience.map((job, index) => (

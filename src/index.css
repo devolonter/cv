@@ -1,13 +1,11 @@
-@media print {
-  html, body {
-    margin: 0.1rem;
-    padding: 0.1rem;
+@media screen {
+  body {
+    margin: 1em;
+    padding: 1rem;
   }
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: 1em;
-  padding: 1rem;
   font-size: 1rem;
 }
