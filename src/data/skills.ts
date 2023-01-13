@@ -6,7 +6,7 @@ export default {
   },
   ts: {
     name: 'TypeScript',
-    level: 3,
+    level: 2,
     lastUsed: Number.MAX_VALUE
   },
   html: {
@@ -15,7 +15,7 @@ export default {
     lastUsed: Number.MAX_VALUE
   },
   react: {
-    name: 'React',
+    name: 'React.js',
     level: 2,
     lastUsed: Number.MAX_VALUE
   },
@@ -27,6 +27,7 @@ export default {
   firebase: {
     name: 'Firebase',
     level: 4,
+    lastUsed: Number.MAX_VALUE
   },
   node: {
     name: 'Node.js',
@@ -53,6 +54,11 @@ export default {
     level: 3,
     lastUsed: Number.MAX_VALUE
   },
+  gin: {
+    name: 'Gin',
+    level: 3,
+    lastUsed: Number.MAX_VALUE
+  },
   webgl: {
     name: 'WebGL',
     level: 4,
@@ -63,14 +69,9 @@ export default {
     level: 4,
     lastUsed: 2022
   },
-  pixi: {
-    name: 'Pixi.js',
-    level: 2,
-    lastUsed: 2019
-  },
-  phaser: {
-    name: 'Phaser.js',
-    level: 2,
-    lastUsed: 2019
+  java: {
+    name: 'Java',
+    level: 3,
+    lastUsed: 2022
   }
 }

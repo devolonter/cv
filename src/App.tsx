@@ -91,9 +91,7 @@ export const App = () => (
             </VStack>
           </GridItem>
           <GridItem>
-            <Skills
-              skills={['js', 'html', 'ts', 'node', 'godot', 'webgl', 'shaders', 'pixi', 'phaser']}
-            />
+            <Skills />
           </GridItem>
         </Grid>
       </Box>

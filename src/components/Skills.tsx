@@ -49,15 +49,21 @@ function Skill(props: SkillProps) {
 }
 
 interface SkillsProps {
-  skills: string[];
+  skills?: string[];
 }
 
 export default function Skills(props: SkillsProps) {
   const display: SkillProps[] = []
 
-  props.skills.forEach((skill) => {
-    display.push(skills[skill as keyof typeof skills] as SkillProps)
-  })
+  if (props.skills) {
+    props.skills.forEach((skill) => {
+      display.push(skills[skill as keyof typeof skills] as SkillProps)
+    })
+  } else {
+    Object.keys(skills).forEach((skill) => {
+      display.push(skills[skill as keyof typeof skills] as SkillProps)
+    })
+  }
 
   display.sort((a, b) => b.level - a.level)
     .sort((a, b) => b.lastUsed - a.lastUsed)
