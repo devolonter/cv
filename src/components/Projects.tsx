@@ -14,15 +14,16 @@ export default function Projects() {
         <FaUserAstronaut />
         <Text>Latest Projects</Text>
       </HStack>
+      <Divider />
       <Grid
         templateColumns="repeat(2, 1fr)"
         w={'100%'}
-        gap={2}
+        gap={3}
       >
         {projects.map((project, index) => (
           <GridItem
             key={index}
-            p={2}
+            p={3}
             fontSize={'0.9rem'}
             bg={index % 3 === 0 || index % 4 === 0 ? 'gray.100' : 'gray.50'}
             rounded={'md'}
@@ -52,11 +53,13 @@ export default function Projects() {
               <Text
                 color={'gray.600'}
                 fontWeight={'bold'}
+                lineHeight={1.33}
               >
                 <b>Role: </b>{project.role}
               </Text>
               <Text
                 color={'gray.500'}
+                lineHeight={1.33}
               >
                 <b>Technologies: </b>{project.technologies.join(', ')}
               </Text>

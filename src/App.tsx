@@ -81,12 +81,12 @@ export const App = () => (
         >
           <Text>
             As a highly skilled software developer with over 15 years of experience, I have a proven track record of
-            success in designing, developing and maintaining a wide range of applications. My expertise includes
-            mobile application development using Flutter, backend development using Go, web development using React,
-            and game development using Godot.<br /><br />I have experience in leading and collaborating in the small teams, and have a
-            strong understanding of industry best practices and performance optimization techniques. I have successfully
-            released several mobile applications and games, and have provided consulting services to companies to improve
-            the performance of their games.
+            success in designing, developing, and maintaining a wide range of applications. My expertise includes mobile
+            application development using Flutter, backend development using Go, web development using React, and game
+            development using Godot.<br /><br />
+            I have experience in collaborating in small teams and have a strong understanding of industry best
+            practices and performance optimization techniques. I have successfully released several mobile applications
+            and games, and have provided consulting services to companies to improve the performance of their games.
           </Text>
         </VStack>
         <Grid
