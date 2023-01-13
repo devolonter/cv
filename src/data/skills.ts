@@ -6,7 +6,7 @@ export default {
   },
   ts: {
     name: 'TypeScript',
-    level: 2,
+    level: 3,
     lastUsed: Number.MAX_VALUE
   },
   html: {
@@ -16,7 +16,7 @@ export default {
   },
   react: {
     name: 'React.js',
-    level: 2,
+    level: 3,
     lastUsed: Number.MAX_VALUE
   },
   vue: {
@@ -31,7 +31,7 @@ export default {
   },
   node: {
     name: 'Node.js',
-    level: 3,
+    level: 4,
     lastUsed: Number.MAX_VALUE
   },
   git: {
@@ -51,17 +51,17 @@ export default {
   },
   dart: {
     name: 'Dart',
-    level: 3,
+    level: 4,
     lastUsed: Number.MAX_VALUE
   },
   go: {
     name: 'Go',
-    level: 3,
+    level: 4,
     lastUsed: Number.MAX_VALUE
   },
   gin: {
     name: 'Gin',
-    level: 3,
+    level: 4,
     lastUsed: Number.MAX_VALUE
   },
   webgl: {

@@ -1,7 +1,7 @@
 import {
   Badge,
   Box,
-  ChakraProvider, Container, Divider, Flex, Grid, GridItem, HStack, Text,
+  ChakraProvider, Container, Divider, Flex, Grid, GridItem, HStack, Spacer, Text,
   theme, VStack,
 } from '@chakra-ui/react'
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
@@ -39,9 +39,17 @@ export const App = () => (
               <Text
                 color={'gray.600'}
                 mt={0}
+                lineHeight={1.33}
               >
                 Flutter developer, Full-Stack Web Developer and Game Development Practitioner
               </Text>
+              <Spacer />
+              <HStack
+                spacing={4}
+              >
+                <Text><b>English:</b> A2-B1</Text>
+                <Text><b>Russian:</b> Native</Text>
+              </HStack>
             </Flex>
           </GridItem>
           <GridItem>
@@ -64,20 +72,23 @@ export const App = () => (
             </VStack>
             </GridItem>
         </Grid>
-        <Box
-          py={2}
-          px={4}
-          bg={'gray.100'}
-          rounded={'xl'}
+        <VStack
           mt={4}
+          lineHeight={1.33}
+          p={2}
+          bg={'gray.100'}
+          rounded={'md'}
         >
-          I am an experienced web developer with over 15 years of experience in the field. My expertise lies in
-          front-end and back-end development, utilizing technologies such as HTML/CSS/JS, React, Vue, Node.js,
-          and WebGL to create engaging and interactive web experiences. I also have experience with game engines
-          such as Godot, and have a strong understanding of animation, shaders, and WebGL. I am constantly seeking
-          to improve my skills and stay current with the latest industry trends. I am excited about the opportunity
-          to bring my expertise to the role of a playable ads web developer.
-        </Box>
+          <Text>
+            As a highly skilled software developer with over 15 years of experience, I have a proven track record of
+            success in designing, developing and maintaining a wide range of applications. My expertise includes
+            mobile application development using Flutter, backend development using Go, web development using React,
+            and game development using Godot.<br /><br />I have experience in leading and collaborating in the small teams, and have a
+            strong understanding of industry best practices and performance optimization techniques. I have successfully
+            released several mobile applications and games, and have provided consulting services to companies to improve
+            the performance of their games.
+          </Text>
+        </VStack>
         <Grid
           templateColumns="1fr auto"
           gap={6}
