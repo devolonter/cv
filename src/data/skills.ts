@@ -61,7 +61,7 @@ export default {
   shaders: {
     name: 'Shaders',
     level: 4,
-    lastUsed: Number.MAX_VALUE
+    lastUsed: 2022
   },
   pixi: {
     name: 'Pixi.js',
