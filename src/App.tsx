@@ -7,6 +7,7 @@ import {
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
+import Projects from './components/Projects'
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -94,6 +95,9 @@ export const App = () => (
             <Skills />
           </GridItem>
         </Grid>
+        <VStack>
+          <Projects />
+        </VStack>
       </Box>
     </Box>
   </ChakraProvider>

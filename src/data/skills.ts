@@ -49,6 +49,11 @@ export default {
     level: 4,
     lastUsed: Number.MAX_VALUE
   },
+  dart: {
+    name: 'Dart',
+    level: 3,
+    lastUsed: Number.MAX_VALUE
+  },
   go: {
     name: 'Go',
     level: 3,
