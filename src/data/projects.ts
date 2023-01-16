@@ -29,7 +29,7 @@ export default [
   },
   {
     name: 'Food Frenzy: Puzzle',
-    description: 'Match3 game with a unique mechanic.',
+    description: 'Match-3 game with a unique mechanic.',
     technologies: ['Firebase', 'Rest API', 'Nakama', 'Godot', 'Git'],
     role: 'Lead Developer, Game Designer, Shader Programmer, Animator, Particle Designer',
     date: 'August 2020 - February 2022',
