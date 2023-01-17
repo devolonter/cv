@@ -1,4 +1,4 @@
-export default {
+const skills = {
   js: {
     name: 'JavaScript',
     level: 5,
@@ -31,7 +31,7 @@ export default {
   },
   node: {
     name: 'Node.js',
-    level: 4,
+    level: 3,
     lastUsed: Number.MAX_VALUE
   },
   git: {
@@ -80,3 +80,5 @@ export default {
     lastUsed: 2022
   }
 }
+
+export default skills

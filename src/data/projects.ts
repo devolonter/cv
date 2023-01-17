@@ -1,4 +1,4 @@
-export default [
+const projects = [
   {
     name: 'Locafi',
     description: 'A real-time location tracking app.',
@@ -42,3 +42,5 @@ export default [
     date: 'February 2020 - August 2020',
   }
 ]
+
+export default projects

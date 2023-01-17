@@ -1,4 +1,4 @@
-export default [
+const experience = [
   {
     employer: 'Wild Pluto',
     title: 'Flutter Developer, Full-Stack Web Developer',
@@ -41,3 +41,5 @@ export default [
     ],
   }
 ]
+
+export default experience

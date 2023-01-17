@@ -1,8 +1,14 @@
 import {
-  Badge,
   Box,
-  ChakraProvider, Container, Divider, Flex, Grid, GridItem, HStack, Spacer, Text,
-  theme, VStack,
+  Flex,
+  Grid,
+  GridItem,
+  HStack,
+  Spacer,
+  Text,
+  VStack,
+  ChakraProvider,
+  theme,
 } from '@chakra-ui/react'
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
 import Skills from './components/Skills'
