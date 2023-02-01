@@ -14,6 +14,7 @@ import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import info from './data/info'
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -40,21 +41,22 @@ export const App = () => (
                 textTransform={'uppercase'}
                 fontWeight={'bold'}
               >
-                Artur Bikmullin
+                {info.full_name}
               </Text>
               <Text
                 color={'gray.600'}
                 mt={0}
                 lineHeight={1.33}
               >
-                Flutter developer, Full-Stack Web Developer and Game Development Practitioner
+                {info.title}
               </Text>
               <Spacer />
               <HStack
                 spacing={4}
               >
-                <Text><b>English:</b> A2-B1</Text>
-                <Text><b>Russian:</b> Native</Text>
+                {Object.entries(info.languages).map(([key, value]) => (
+                  <Text key={key} textTransform={'capitalize'}><b>{key}:</b> {value}</Text>
+                ))}
               </HStack>
             </Flex>
           </GridItem>
@@ -63,18 +65,18 @@ export const App = () => (
               alignItems={'start'}
               fontSize={'1.2rem'}
             >
-              <HStack>
+              {info.email && <HStack>
                 <MdEmail />
-                <Text>devolonter@gmail.com</Text>
-              </HStack>
-              <HStack>
-                <AiOutlineGithub />
-                <Text>github.com/devolonter</Text>
-              </HStack>
-              <HStack>
-                <AiFillLinkedin />
-                <Text>linkedin.com/in/devolonter</Text>
-              </HStack>
+                <Text>{info.email}</Text>
+              </HStack>}
+              {info.github && <HStack>
+                <AiOutlineGithub/>
+                <Text>github.com/{info.github}</Text>
+              </HStack>}
+              {info.linkedin && <HStack>
+                <AiFillLinkedin/>
+                <Text>linkedin.com/in/{info.linkedin}</Text>
+              </HStack>}
             </VStack>
             </GridItem>
         </Grid>
@@ -85,14 +87,8 @@ export const App = () => (
           bg={'gray.100'}
           rounded={'md'}
         >
-          <Text>
-            As a highly skilled software developer with over 15 years of experience, I have a proven track record of
-            success in developing and maintaining a wide range of applications. My expertise includes mobile
-            application development using Flutter, backend development using Go, web development using React, and 2d-game
-            development using Godot.<br /><br />
-            I have experience in collaborating in small teams and have a strong understanding of industry best
-            practices and performance optimization techniques. I have successfully released several mobile applications
-            and 2d-games, and have provided consulting services to companies to improve the performance of their games.
+          <Text whiteSpace={'pre-wrap'}>
+            {info.summary}
           </Text>
         </VStack>
         <Grid
