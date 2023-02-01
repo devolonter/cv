@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, HStack, List, ListIcon, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react'
+import { Box, Divider, HStack, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react'
 import { MdWork } from 'react-icons/all'
 import experience from '../data/experience'
 

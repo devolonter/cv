@@ -1,4 +1,4 @@
-import { Badge, Box, chakra, Divider, Flex, HStack, Text, VStack } from '@chakra-ui/react'
+import { chakra, Divider, Flex, HStack, Text, VStack } from '@chakra-ui/react'
 import skills from '../data/skills'
 import { AiFillStar, GiStrong } from 'react-icons/all'
 
