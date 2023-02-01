@@ -19,7 +19,7 @@ import info from './data/info'
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Box
-      maxW="960px"
+      w="960px"
       mx="auto"
       color={'gray.700'}
     >
