@@ -3,7 +3,7 @@ const projects = [
     name: 'Locafi',
     description: 'A real-time location tracking app.',
     technologies: ['Firebase', 'Rest API', 'Go', 'Gin', 'Socket.io', 'gRPC', 'Unix', 'Nginx', 'MongoDB', 'Git'],
-    role: 'Backend Developer/Architect',
+    role: 'Backend Developer, Architect',
     date: 'Active Project',
   },
   {
