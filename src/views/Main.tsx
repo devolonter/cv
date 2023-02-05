@@ -27,7 +27,7 @@ export function Main() {
     maxW="960px"
     mx="auto"
     color={textColor}
-    p={{base: isScreen ? 3 : 0, md: '1rem 0'}}
+    p={{base: isScreen ? 3 : 0, lg: '1rem 0'}}
   >
     <Box
       as={'header'}
@@ -72,6 +72,7 @@ export function Main() {
             alignItems={'start'}
             fontSize={{base: '1.0rem', md: '1.1rem'}}
             spacing={{base: 0, md: 1}}
+            pr={{base: 0, sm: 8, lg: 0}}
           >
             {info.email && <HStack>
                 <MdEmail/>
