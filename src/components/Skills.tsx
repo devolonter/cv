@@ -1,5 +1,4 @@
 import {
-  Box,
   chakra,
   Divider,
   Flex,
