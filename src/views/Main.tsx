@@ -27,7 +27,7 @@ export function Main() {
     maxW="960px"
     mx="auto"
     color={textColor}
-    p={{base: isScreen ? 4 : 0, md: 0}}
+    p={{base: isScreen ? 3 : 0, md: '1rem 0'}}
   >
     <Box
       as={'header'}
