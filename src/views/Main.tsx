@@ -3,7 +3,7 @@ import {
   Flex,
   Grid,
   GridItem,
-  HStack,
+  HStack, Link,
   Spacer,
   Text,
   useColorModeValue,
@@ -79,11 +79,11 @@ export function Main() {
             </HStack>}
             {info.github && <HStack>
                 <AiOutlineGithub/>
-                <Text>github.com/{info.github}</Text>
+                <Link href={`https://github.com/${info.github}`} isExternal>github.com/{info.github}</Link>
             </HStack>}
             {info.linkedin && <HStack>
                 <AiFillLinkedin/>
-                <Text>linkedin.com/in/{info.linkedin}</Text>
+                <Link href={`https://linkedin.com/in/${info.linkedin}`} isExternal>linkedin.com/in/{info.linkedin}</Link>
             </HStack>}
           </VStack>
         </GridItem>
