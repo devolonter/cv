@@ -7,7 +7,7 @@ const experience = [
     responsibilities: [
       'Quickly learned the basics of Flutter and successfully developed and released a mobile application within a month.',
       'Developed 5 mobile applications using Flutter, resulting in the release of several successful apps, including an alert app with over 100k downloads.',
-      'Implemented various features, in applications developed from scratch, including real-time data syncing, social sharing, maps, and Firebase integration, and push notifications.',
+      'Implemented various features, in applications developed from scratch, including real-time data syncing, social sharing, maps, Firebase integration, and push notifications.',
       'Created and maintained the backend using Go, Firebase, gRPC, Socket.io, and Gin framework, ensuring seamless integration and high performance.',
       'Developed web applications using React while continuing to improve my skills and knowledge of the framework.'
     ],
