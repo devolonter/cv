@@ -6,7 +6,7 @@ export default function Projects() {
   const projectEvenBgColor = useColorModeValue('gray.100', 'gray.700')
   const projectOddBgColor = useColorModeValue('gray.50', 'gray.800')
   const roleColor = useColorModeValue('gray.600', 'gray.400')
-  const isPrint = useMediaQuery('(print)')
+  const [isScreen] = useMediaQuery('screen')
 
   return (
     <>
@@ -32,7 +32,7 @@ export default function Projects() {
             p={3}
             fontSize={'0.9rem'}
             bg={{
-              base: !isPrint ?
+              base: isScreen ?
                 (index % 2 === 0 ? projectEvenBgColor : projectOddBgColor) :
                 index % 3 === 0 || index % 4 === 0 ? projectEvenBgColor : projectOddBgColor,
               md: index % 3 === 0 || index % 4 === 0 ? projectEvenBgColor : projectOddBgColor

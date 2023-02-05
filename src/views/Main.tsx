@@ -1,4 +1,15 @@
-import { Box, Flex, Grid, GridItem, HStack, Spacer, Text, useColorModeValue, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  HStack,
+  Spacer,
+  Text,
+  useColorModeValue,
+  useMediaQuery,
+  VStack
+} from '@chakra-ui/react'
 import info from '../data/info'
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
 import Experience from '../components/Experience'
@@ -10,11 +21,13 @@ export function Main() {
   const textColor = useColorModeValue('gray.700', 'gray.300')
   const titleColor = useColorModeValue('gray.600', 'gray.500')
   const blockColor = useColorModeValue('gray.100', 'gray.700')
+  const [isScreen] = useMediaQuery('screen')
 
   return <Box
     maxW="960px"
     mx="auto"
     color={textColor}
+    p={{base: isScreen ? 4 : 0, md: 0}}
   >
     <Box
       as={'header'}

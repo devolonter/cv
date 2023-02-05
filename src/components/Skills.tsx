@@ -25,7 +25,7 @@ interface SkillProps {
 function Skill(props: SkillProps) {
   const starActiveColor = useColorModeValue('gray.500', 'gray.400')
   const starInactiveColor = useColorModeValue('gray.200', 'gray.700')
-  const isPrint = useMediaQuery('(print)')
+  const [isScreen] = useMediaQuery('screen')
 
   return (
     <Flex
@@ -35,18 +35,18 @@ function Skill(props: SkillProps) {
     >
       <Text
         fontWeight={'bold'}
-        fontSize={{ base: !isPrint ? '1rem' : '1.1rem', md: '1.1rem' }}
+        fontSize={{ base: isScreen ? '1rem' : '1.1rem', md: '1.1rem' }}
       >
         {props.name}
       </Text>
       <HStack
-        spacing={{ base: !isPrint ? 0 : 1, md: 1 }}
+        spacing={{ base: isScreen ? 0 : 1, md: 1 }}
         m={'0.125rem 0 0.125rem'}
       >
         {[...Array(5)].map((_, i) => (
           <Star
             color={i < props.level ? starActiveColor : starInactiveColor}
-            fontSize={{ base: !isPrint ? '1rem' : '1.25rem', md: '1.25rem' }}
+            fontSize={{ base: isScreen ? '1rem' : '1.25rem', md: '1.25rem' }}
             key={i}
           />
         ))}
@@ -69,7 +69,7 @@ interface SkillsProps {
 }
 
 export default function Skills(props: SkillsProps) {
-  const isPrint = useMediaQuery('(print)')
+  const [isScreen] = useMediaQuery('screen')
 
   const display: SkillProps[] = []
 
@@ -104,9 +104,9 @@ export default function Skills(props: SkillsProps) {
         w={'100%'}
         mt={2}
         pl={'0.5rem'}
-        pr={{ base: !isPrint ? '0' : '2rem', md: '2rem' }}
-        gap={{ base: !isPrint ? 3 : 4, md: 4 }}
-        templateColumns={{ base: !isPrint ? 'repeat(3, 1fr)' : '1fr', sm: 'repeat(4, 1fr)', md: '1fr' }}
+        pr={{ base: isScreen ? '0' : '2rem', md: '2rem' }}
+        gap={{ base: isScreen ? 3 : 4, md: 4 }}
+        templateColumns={{ base: isScreen ? 'repeat(3, 1fr)' : '1fr', sm: 'repeat(4, 1fr)', md: '1fr' }}
       >
         {display.map((skill, i) => (
           <GridItem key={skill.name} className={i === 8 ? 'page-break' : ''}>
