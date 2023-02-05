@@ -1,0 +1,2 @@
+@media print{body{margin:0;padding:1.5rem}#header{grid-template-columns:1fr auto}#switch-mode{display:none}#experience{grid-template-columns:1fr auto}#skills{order:1}#projects{grid-template-columns:repeat(2,1fr)}.page-break{page-break-after:always}}body{font-family:Arial,sans-serif!important;font-size:1rem}
+/*# sourceMappingURL=main.5b318969.css.map*/
