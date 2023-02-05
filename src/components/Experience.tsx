@@ -1,8 +1,10 @@
-import { Box, Divider, HStack, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react'
+import { Box, Divider, HStack, ListItem, Text, UnorderedList, useColorModeValue, VStack } from '@chakra-ui/react'
 import { MdWork } from 'react-icons/all'
 import experience from '../data/experience'
 
 export default function Experience() {
+  const blockColor = useColorModeValue('gray.100', 'gray.700')
+
   return (
     <>
       <HStack
@@ -26,7 +28,7 @@ export default function Experience() {
             w={'100%'}
           >
             <Box
-              bg={'gray.100'}
+              bg={blockColor}
               rounded={'md'}
               px={4}
               py={2}

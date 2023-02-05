@@ -1,8 +1,12 @@
-import { HStack, VStack, Text, Divider, Grid, GridItem } from '@chakra-ui/react'
+import { HStack, VStack, Text, Divider, Grid, GridItem, useColorModeValue } from '@chakra-ui/react'
 import { FaUserAstronaut } from 'react-icons/all'
 import projects from '../data/projects'
 
 export default function Projects() {
+  const projectEvenBgColor = useColorModeValue('gray.100', 'gray.700')
+  const projectOddBgColor = useColorModeValue('gray.50', 'gray.800')
+  const roleColor = useColorModeValue('gray.600', 'gray.400')
+
   return (
     <>
       <HStack
@@ -26,8 +30,8 @@ export default function Projects() {
             p={3}
             fontSize={'0.9rem'}
             bg={{
-              base: index % 2 === 0 ? 'gray.100' : 'gray.50',
-              sm: index % 3 === 0 || index % 4 === 0 ? 'gray.100' : 'gray.50'
+              base: index % 2 === 0 ? projectEvenBgColor : projectOddBgColor,
+              sm: index % 3 === 0 || index % 4 === 0 ? projectEvenBgColor : projectOddBgColor
             }}
             rounded={'md'}
           >
@@ -54,7 +58,7 @@ export default function Projects() {
                 {project.description}
               </Text>
               <Text
-                color={'gray.600'}
+                color={roleColor}
                 fontWeight={'bold'}
                 lineHeight={1.33}
               >

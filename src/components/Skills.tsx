@@ -1,4 +1,4 @@
-import { chakra, Divider, Flex, Grid, GridItem, HStack, Stack, Text, VStack } from '@chakra-ui/react'
+import { chakra, Divider, Flex, Grid, GridItem, HStack, Text, useColorModeValue, VStack } from '@chakra-ui/react'
 import skills from '../data/skills'
 import { AiFillStar, GiStrong } from 'react-icons/all'
 
@@ -11,6 +11,9 @@ interface SkillProps {
 }
 
 function Skill(props: SkillProps) {
+  const starActiveColor = useColorModeValue('gray.500', 'gray.400')
+  const starInactiveColor = useColorModeValue('gray.200', 'gray.700')
+
   return (
     <Flex
       direction={'column'}
@@ -29,7 +32,7 @@ function Skill(props: SkillProps) {
       >
         {[...Array(5)].map((_, i) => (
           <Star
-            color={i < props.level ? 'gray.500' : 'gray.200'}
+            color={i < props.level ? starActiveColor : starInactiveColor}
             fontSize={{ base: '1rem', md: '1.25rem' }}
             key={i}
           />

@@ -4,6 +4,7 @@ import { App } from './App'
 import reportWebVitals from './reportWebVitals'
 import * as serviceWorker from './serviceWorker'
 import './index.css'
+import { ColorModeScript } from '@chakra-ui/react'
 
 
 const container = document.getElementById('root')
@@ -12,6 +13,7 @@ const root = ReactDOM.createRoot(container)
 
 root.render(
   <React.StrictMode>
+    <ColorModeScript />
     <App />
   </React.StrictMode>,
 )

@@ -5,6 +5,12 @@
   }
 }
 
+@media print {
+  #switch-mode {
+    display: none;
+  }
+}
+
 body {
   font-family: Arial, sans-serif !important;
   font-size: 1rem;
