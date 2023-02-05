@@ -57,8 +57,8 @@ export function Main() {
         <GridItem>
           <VStack
             alignItems={'start'}
-            fontSize={{base: '1.0rem', md: '1.2rem'}}
-            spacing={{base: 0, md: 2}}
+            fontSize={{base: '1.0rem', md: '1.1rem'}}
+            spacing={{base: 0, md: 1}}
           >
             {info.email && <HStack>
                 <MdEmail/>
