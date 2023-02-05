@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.ba7f9740.css","mappings":"AAAA,cACE,KACE,UAAW,CACX,YACF,CACF,CAEA,KACE,sCAAyC,CACzC,cACF","sources":["index.css"],"sourcesContent":["@media screen {\n  body {\n    margin: 1em;\n    padding: 1rem;\n  }\n}\n\nbody {\n  font-family: Arial, sans-serif !important;\n  font-size: 1rem;\n}"],"names":[],"sourceRoot":""}
