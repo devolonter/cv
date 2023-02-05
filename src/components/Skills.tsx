@@ -1,6 +1,19 @@
-import { chakra, Divider, Flex, Grid, GridItem, HStack, Text, useColorModeValue, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  chakra,
+  Divider,
+  Flex,
+  Grid,
+  GridItem,
+  HStack,
+  Text,
+  useColorModeValue,
+  useMediaQuery,
+  VStack
+} from '@chakra-ui/react'
 import skills from '../data/skills'
 import { AiFillStar, GiStrong } from 'react-icons/all'
+import React from 'react'
 
 const Star = chakra(AiFillStar)
 
@@ -13,6 +26,7 @@ interface SkillProps {
 function Skill(props: SkillProps) {
   const starActiveColor = useColorModeValue('gray.500', 'gray.400')
   const starInactiveColor = useColorModeValue('gray.200', 'gray.700')
+  const isPrint = useMediaQuery('(print)')
 
   return (
     <Flex
@@ -22,18 +36,18 @@ function Skill(props: SkillProps) {
     >
       <Text
         fontWeight={'bold'}
-        fontSize={{ base: '1rem', md: '1.1rem' }}
+        fontSize={{ base: !isPrint ? '1rem' : '1.1rem', md: '1.1rem' }}
       >
         {props.name}
       </Text>
       <HStack
-        spacing={{ base: 0, md: 1 }}
+        spacing={{ base: !isPrint ? 0 : 1, md: 1 }}
         m={'0.125rem 0 0.125rem'}
       >
         {[...Array(5)].map((_, i) => (
           <Star
             color={i < props.level ? starActiveColor : starInactiveColor}
-            fontSize={{ base: '1rem', md: '1.25rem' }}
+            fontSize={{ base: !isPrint ? '1rem' : '1.25rem', md: '1.25rem' }}
             key={i}
           />
         ))}
@@ -56,6 +70,8 @@ interface SkillsProps {
 }
 
 export default function Skills(props: SkillsProps) {
+  const isPrint = useMediaQuery('(print)')
+
   const display: SkillProps[] = []
 
   if (props.skills) {
@@ -89,17 +105,13 @@ export default function Skills(props: SkillsProps) {
         w={'100%'}
         mt={2}
         pl={'0.5rem'}
-        pr={{ base: '0', md: '2rem' }}
-        gap={{ base: 3, md: 4 }}
-        templateColumns={{ base: 'repeat(3, 1fr)', sm: 'repeat(4, 1fr)', md: '1fr' }}
+        pr={{ base: !isPrint ? '0' : '2rem', md: '2rem' }}
+        gap={{ base: !isPrint ? 3 : 4, md: 4 }}
+        templateColumns={{ base: !isPrint ? 'repeat(3, 1fr)' : '1fr', sm: 'repeat(4, 1fr)', md: '1fr' }}
       >
-        {display.map((skill) => (
-          <GridItem
-            key={skill.name}
-          >
-            <Skill
-              {...skill}
-            />
+        {display.map((skill, i) => (
+          <GridItem key={skill.name} className={i === 8 ? 'page-break' : ''}>
+            <Skill {...skill}/>
           </GridItem>
         ))}
       </Grid>

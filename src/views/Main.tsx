@@ -20,6 +20,7 @@ export function Main() {
       as={'header'}
     >
       <Grid
+        id={'header'}
         templateColumns={{base: '1fr', md: '1fr auto'}}
         gap={4}
       >
@@ -86,6 +87,7 @@ export function Main() {
         </Text>
       </VStack>
       <Grid
+        id={'experience'}
         templateColumns={{base: '1fr', md: '1fr auto'}}
         gap={6}
         mt={4}
@@ -99,6 +101,7 @@ export function Main() {
           </VStack>
         </GridItem>
         <GridItem
+          id={'skills'}
           order={{base: -1, md: 1}}
         >
           <Skills/>

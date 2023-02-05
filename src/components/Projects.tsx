@@ -1,4 +1,4 @@
-import { HStack, VStack, Text, Divider, Grid, GridItem, useColorModeValue } from '@chakra-ui/react'
+import { HStack, VStack, Text, Divider, Grid, GridItem, useColorModeValue, useMediaQuery } from '@chakra-ui/react'
 import { FaUserAstronaut } from 'react-icons/all'
 import projects from '../data/projects'
 
@@ -6,6 +6,7 @@ export default function Projects() {
   const projectEvenBgColor = useColorModeValue('gray.100', 'gray.700')
   const projectOddBgColor = useColorModeValue('gray.50', 'gray.800')
   const roleColor = useColorModeValue('gray.600', 'gray.400')
+  const isPrint = useMediaQuery('(print)')
 
   return (
     <>
@@ -20,6 +21,7 @@ export default function Projects() {
       </HStack>
       <Divider />
       <Grid
+        id={'projects'}
         templateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)' }}
         w={'100%'}
         gap={3}
@@ -30,8 +32,10 @@ export default function Projects() {
             p={3}
             fontSize={'0.9rem'}
             bg={{
-              base: index % 2 === 0 ? projectEvenBgColor : projectOddBgColor,
-              sm: index % 3 === 0 || index % 4 === 0 ? projectEvenBgColor : projectOddBgColor
+              base: !isPrint ?
+                (index % 2 === 0 ? projectEvenBgColor : projectOddBgColor) :
+                index % 3 === 0 || index % 4 === 0 ? projectEvenBgColor : projectOddBgColor,
+              md: index % 3 === 0 || index % 4 === 0 ? projectEvenBgColor : projectOddBgColor
             }}
             rounded={'md'}
           >
