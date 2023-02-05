@@ -1,4 +1,14 @@
-import { Box, Divider, HStack, ListItem, Text, UnorderedList, useColorModeValue, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Divider,
+  HStack,
+  ListItem,
+  Text,
+  UnorderedList,
+  useColorModeValue,
+  useMediaQuery,
+  VStack
+} from '@chakra-ui/react'
 import { MdWork } from 'react-icons/all'
 import experience from '../data/experience'
 
@@ -36,13 +46,15 @@ export default function Experience() {
             >
               <Text
                 fontWeight={'bold'}
+                lineHeight={1.1}
+                mt={'0.33rem'}
               >
                 {job.title}
               </Text>
               <Text
                 color={'gray.500'}
                 lineHeight={1}
-                mt={0.25}
+                mt={'0.2rem'}
               >
                 {job.date}. {job.employer} &mdash; {job.location}
               </Text>
