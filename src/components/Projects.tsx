@@ -16,7 +16,7 @@ export default function Projects() {
       </HStack>
       <Divider />
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{ base: '1fr', sm: 'repeat(2, 1fr)' }}
         w={'100%'}
         gap={3}
       >
@@ -25,7 +25,10 @@ export default function Projects() {
             key={index}
             p={3}
             fontSize={'0.9rem'}
-            bg={index % 3 === 0 || index % 4 === 0 ? 'gray.100' : 'gray.50'}
+            bg={{
+              base: index % 2 === 0 ? 'gray.100' : 'gray.50',
+              sm: index % 3 === 0 || index % 4 === 0 ? 'gray.100' : 'gray.50'
+            }}
             rounded={'md'}
           >
             <VStack

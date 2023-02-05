@@ -1,4 +1,4 @@
-import { chakra, Divider, Flex, HStack, Text, VStack } from '@chakra-ui/react'
+import { chakra, Divider, Flex, Grid, GridItem, HStack, Stack, Text, VStack } from '@chakra-ui/react'
 import skills from '../data/skills'
 import { AiFillStar, GiStrong } from 'react-icons/all'
 
@@ -19,18 +19,18 @@ function Skill(props: SkillProps) {
     >
       <Text
         fontWeight={'bold'}
-        fontSize={'1.1rem'}
+        fontSize={{ base: '1rem', md: '1.1rem' }}
       >
         {props.name}
       </Text>
       <HStack
-        spacing={1}
+        spacing={{ base: 0, md: 1 }}
         m={'0.125rem 0 0.125rem'}
       >
         {[...Array(5)].map((_, i) => (
           <Star
             color={i < props.level ? 'gray.500' : 'gray.200'}
-            size={'1.25rem'}
+            fontSize={{ base: '1rem', md: '1.25rem' }}
             key={i}
           />
         ))}
@@ -82,19 +82,24 @@ export default function Skills(props: SkillsProps) {
         <Text>Skills</Text>
       </HStack>
       <Divider />
-      <VStack
+      <Grid
+        w={'100%'}
         mt={2}
         pl={'0.5rem'}
-        pr={'2rem'}
-        spacing={4}
+        pr={{ base: '0', md: '2rem' }}
+        gap={{ base: 3, md: 4 }}
+        templateColumns={{ base: 'repeat(3, 1fr)', sm: 'repeat(4, 1fr)', md: '1fr' }}
       >
         {display.map((skill) => (
-          <Skill
+          <GridItem
             key={skill.name}
-            {...skill}
-          />
+          >
+            <Skill
+              {...skill}
+            />
+          </GridItem>
         ))}
-      </VStack>
+      </Grid>
     </VStack>
   )
 }

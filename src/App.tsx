@@ -8,7 +8,7 @@ import {
   Text,
   VStack,
   ChakraProvider,
-  theme,
+  theme, Stack,
 } from '@chakra-ui/react'
 import { AiFillLinkedin, AiOutlineGithub, MdEmail } from 'react-icons/all'
 import Skills from './components/Skills'
@@ -19,7 +19,7 @@ import info from './data/info'
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Box
-      w="960px"
+      maxW="960px"
       mx="auto"
       color={'gray.700'}
     >
@@ -27,7 +27,7 @@ export const App = () => (
         as={'header'}
       >
         <Grid
-          templateColumns="1fr auto"
+          templateColumns={{ base: '1fr', md: '1fr auto' }}
           gap={4}
         >
           <GridItem>
@@ -63,7 +63,8 @@ export const App = () => (
           <GridItem>
             <VStack
               alignItems={'start'}
-              fontSize={'1.2rem'}
+              fontSize={{ base: '1.0rem', md: '1.2rem' }}
+              spacing={{ base: 0, md: 2 }}
             >
               {info.email && <HStack>
                 <MdEmail />
@@ -92,7 +93,7 @@ export const App = () => (
           </Text>
         </VStack>
         <Grid
-          templateColumns="1fr auto"
+          templateColumns={{ base: '1fr', md: '1fr auto' }}
           gap={6}
           mt={4}
         >
@@ -104,7 +105,9 @@ export const App = () => (
               <Experience />
             </VStack>
           </GridItem>
-          <GridItem>
+          <GridItem
+            order={{ base: -1, md: 1 }}
+          >
             <Skills />
           </GridItem>
         </Grid>
