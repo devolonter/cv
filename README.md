@@ -1,5 +1,7 @@
 # Personal CV Template
 
+![devolonter_template-style_light_color_table_and_laptop_front_vi_d1b3e37d-d532-4104-8715-11b15ac712c0](https://user-images.githubusercontent.com/225176/217016830-189ab71f-4755-4d28-b2c9-2a8b33bc3bba.png)
+
 Welcome to the customizable CV template, built using React and Chakra UI! This template is designed to help you create a personalized and professional CV in minutes. You can easily customize your personal information, skills, work experience, and latest projects to showcase your strengths and achievements.
 
 ## Features
