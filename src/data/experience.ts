@@ -18,7 +18,7 @@ const experience = [
     location: 'Warsaw, Poland',
     date: 'November 2019 - February 2022',
     responsibilities: [
-      'Created a modular, multi-threaded 2d-game framework using Godot, resulting in improved performance and scalability.',
+      'Created a modular, multi-threaded 2D game framework using Godot, resulting in improved performance and scalability.',
       'Participated in the development of two mobile match3 games, including the development of main game modules, and participated in the development and brainstorming of game mechanics and game ideas, resulting in engaging and innovative gameplay experiences.',
       'Developed an efficient UI system using shaders which reduced the size of the game.',
       'Implemented most of the animations programmatically using shaders, tweening, and particles, resulting in visually stunning and smooth gameplay experiences.',
