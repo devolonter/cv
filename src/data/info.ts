@@ -10,7 +10,7 @@ const info = {
   linkedin: 'devolonter',
   summary: 'As a highly skilled software developer with over 15 years of experience, I have a proven track record of ' +
     'success in developing and maintaining a wide range of applications. My expertise includes mobile ' +
-    'application development using Flutter, backend development using Go, web development using Vue and React, and 2d-game ' +
+    'application development using Flutter, backend development using Go and Node.js, web development using Vue and React, and 2d-games ' +
     'development using Godot.\n\n' +
     'I have experience in collaborating in small teams and have a strong understanding of industry best ' +
     'practices and performance optimization techniques. I have successfully released several mobile applications ' +
