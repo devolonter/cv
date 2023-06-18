@@ -109,7 +109,7 @@ export default function Skills(props: SkillsProps) {
         templateColumns={{ base: isScreen ? 'repeat(3, 1fr)' : '1fr', sm: 'repeat(4, 1fr)', md: '1fr' }}
       >
         {display.map((skill, i) => (
-          <GridItem key={skill.name} className={i === 8 ? 'page-break' : ''}>
+          <GridItem key={skill.name} className={i === 9 ? 'page-break' : ''}>
             <Skill {...skill}/>
           </GridItem>
         ))}

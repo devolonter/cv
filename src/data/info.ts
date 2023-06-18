@@ -8,13 +8,11 @@ const info = {
   email: 'devolonter@gmail.com',
   github: 'devolonter',
   linkedin: 'devolonter',
-  summary: 'As a highly skilled software developer with over 15 years of experience, I have a proven track record of ' +
-    'success in developing and maintaining a wide range of applications. My expertise includes mobile ' +
-    'application development using Flutter, backend development using Go and Node.js, web development using Vue and React, and 2D game ' +
-    'development using Godot.\n\n' +
-    'I have experience in collaborating in small teams and have a strong understanding of industry best ' +
-    'practices and performance optimization techniques. I have successfully released several mobile applications ' +
-    'and 2d-games, and have provided consulting services to companies to improve the performance of their games.'
+  summary: 'Flexible programmer with a good foundation in various programming languages, and able to quickly adapt, ' +
+    'learn new technologies, and switch between them. My strengths lie in both teamwork and independent problem-solving, ' +
+    'allowing me to tackle complex and challenging tasks. I have a strong passion for growth and development, ' +
+    'I always take an active part in projects to improve them, bring new ideas, and expand my skill set. ' +
+    'This enthusiasm drives me to continuously enhance my knowledge and expertise in the ever-evolving world of programming.'
 }
 
 export default info
