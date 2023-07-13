@@ -2,8 +2,8 @@ const info = {
   full_name: process.env.REACT_APP_DEVELOPER_NAME,
   title: 'Flutter Developer | Full-Stack (Go, React.js, Node.js) & Game Development Enthusiast',
   languages: {
-    english: 'B1',
-    russian: 'Native',
+    russian: null,
+    english: null,
   },
   email: 'devolonter@gmail.com',
   github: 'devolonter',

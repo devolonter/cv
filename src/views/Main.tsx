@@ -61,8 +61,11 @@ export function Main() {
             <HStack
               spacing={4}
             >
+              <Text>Languages: </Text>
               {Object.entries(info.languages).map(([key, value]) => (
-                <Text key={key} textTransform={'capitalize'}><b>{key}:</b> {value}</Text>
+                <Text key={key} textTransform={'capitalize'}>
+                  <b>{key}</b>{value && (<><b>:</b>{' '}{value}</>)}
+                </Text>
               ))}
             </HStack>
           </Flex>
